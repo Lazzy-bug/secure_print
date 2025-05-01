@@ -1,0 +1,180 @@
+/* owner.css */
+
+/* General container for the dashboard */
+.logout-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .logout-button {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #dc2626;
+  }
+  
+  .logout-button .fa-sign-out-alt {
+    margin-right: 0.5rem;
+  }
+.p-6 {
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styles */
+  .text-2xl {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .font-bold {
+    font-weight: 700;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Buttons styling */
+  button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Button colors */
+  .bg-blue-500 {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .bg-blue-600 {
+    background-color: #2563eb;
+  }
+  
+  .bg-green-500 {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .bg-green-600 {
+    background-color: #059669;
+  }
+  
+  .bg-red-500 {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .bg-red-600 {
+    background-color: #dc2626;
+  }
+  
+  /* Flex container for the buttons */
+  .flex {
+    display: flex;
+  }
+  
+  .gap-4 {
+    gap: 1rem;
+  }
+  
+  /* Styling for icons inside buttons */
+  button .fa-qrcode,
+  button .fa-sign-out-alt {
+    margin-right: 0.5rem;
+  }
+  
+  /* Display the total documents count */
+  p.mb-4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  /* Styling for the document table container */
+  .document-table {
+    margin-top: 2rem;
+  }
+  
+  /* Loading message */
+  h1 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  th {
+    background-color: #edf2f7;
+    color: #2d3748;
+  }
+  
+  td {
+    color: #4a5568;
+  }
+  
+  /* Loading State */
+  h1 {
+    text-align: center;
+    color: #2b6cb0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 3rem;
+  }
+  
+  h1.mb-6 {
+    margin-top: 4rem;
+  }
+  
+  /* Error Handling */
+  .error-message {
+    color: #e53e3e;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  

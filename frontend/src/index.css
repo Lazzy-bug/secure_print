@@ -1,0 +1,991 @@
+/* General Wrapper Styling */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #4b5563;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #2563eb;
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.shop-info,
+.shop-id {
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+  color: #4b5563;
+}
+
+.shop-name {
+  font-weight: bold;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description .fa-shield-alt {
+  margin-left: 5px;
+  color: #10b981;
+}
+
+/* Error and Success Messages */
+.error-message,
+.success-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* File Upload Section */
+.file-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-label {
+  background-color: #2563eb;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-label:hover {
+  background-color: #1d4ed8;
+}
+
+.file-preview {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.upload-button {
+  background-color: #10b981;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.upload-button:hover {
+  background-color: #059669;
+}
+
+.upload-button:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Progress Bar */
+.progress-area {
+  width: 100%;
+  max-width: 600px;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #2563eb;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.progress-area p {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Uploaded File Details */
+.uploaded-area {
+  background-color: #e7f3e7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.uploaded-area p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin: 0.5rem 0;
+}
+
+.uploaded-area .fa-lock,
+.uploaded-area .fa-trash-alt {
+  color: #10b981;
+  margin-right: 8px;
+}
+
+/* DocumentPreview.css */
+
+/* Container styling for the preview area */
+.document-preview-container {
+  width: 12rem; /* Fixed width */
+  height: 8rem; /* Fixed height */
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 0.375rem; /* Rounded corners */
+  overflow: hidden; /* Prevent content from overflowing */
+  background-color: #f3f4f6; /* Light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Loading and error state styling */
+.loading,
+.error {
+  font-size: 0.875rem; /* Text size: small */
+  color: #6b7280; /* Text color: gray */
+  text-align: center;
+}
+
+/* Styling for PDF previews */
+.pdf-preview {
+  width: 100%; /* Fit PDF to the width of the container */
+  height: 100%; /* Fit PDF to the height of the container */
+  object-fit: contain; /* Ensure the PDF content fits while maintaining aspect ratio */
+  border: none; /* Remove default object border */
+}
+
+/* Styling for images */
+.image-preview {
+  max-width: 100%; /* Image will not exceed container width */
+  max-height: 100%; /* Image will not exceed container height */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the entire image is visible within the container */
+  pointer-events: none; /* Disable right-click on images */
+  user-select: none; /* Prevent selection of the image */
+}
+
+/* Background for centered content */
+.preview-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* White background for images and PDFs */
+}
+
+/* General Roadmap Styles */
+.roadmap-container {
+  font-family: 'Arial', sans-serif;
+  margin: 20px auto;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.roadmap-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Timeline Container */
+.cd-container {
+  position: relative;
+  padding: 0;
+}
+
+.cd-line {
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 5px;
+  background-color: #d1d5db; /* Light gray */
+  z-index: 1;
+  transition: height 1s ease-out;
+}
+
+.cd-timeline-block {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.cd-timeline-img {
+  width: 50px;
+  height: 50px;
+  background-color: #e5e7eb; /* Light gray */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.cd-timeline-img.active {
+  background-color: #60a5fa; /* Blue */
+  color: white;
+}
+
+.cd-timeline-img.highlight {
+  background-color: #2563eb; /* Darker blue */
+  color: white;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.8);
+}
+
+.cd-timeline-content {
+  flex-grow: 1;
+  padding: 10px 20px;
+  background-color: #f9fafb; /* Light background */
+  border-radius: 5px;
+  margin-left: 80px; /* Spacing for the number circles */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.cd-timeline-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.cd-timeline-content p {
+  font-size: 1rem;
+  color: #4b5563; /* Text gray */
+}
+
+.current-phase-text {
+  position: absolute;
+  top: 0;
+  right: -150px;
+  background-color: #60a5fa; /* Blue */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.section-title {
+  margin: 20px 0;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2563eb; /* Blue */
+}
+
+/* OwnerSignupForm specific styling */
+#owner-signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.owner-signup-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stacking input fields vertically */
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.form-group input:focus {
+  border-color: #0056b3;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.4); /* Light blue shadow on focus */
+}
+
+.form-group input:hover {
+  border-color: #007bff; /* Change border color on hover */
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+  font-style: italic; /* Slightly lighter color for placeholder text */
+}
+
+.form-group svg {
+  font-size: 18px;
+  color: #777;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.prev-btn,
+.next-btn,
+.submit-btn {
+  padding: 8px 18px; /* Reduced padding for smaller buttons */
+  font-size: 14px;   /* Slightly smaller font */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  background-color: #c82333; /* Dark red color for Previous */
+  border: none;
+  color: white;
+}
+
+.next-btn {
+  background-color: #dc3545; /* Red color for Next */
+  border: none;
+  color: white;
+}
+
+.submit-btn {
+  background-color: #28a745; /* Green color for Signup */
+  border: none;
+  color: white;
+  padding: 10px 18px; /* Adjusted padding for a more standard size */
+  font-size: 16px;
+}
+
+.prev-btn:hover,
+.next-btn:hover,
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.login-btn {
+  width: auto;
+  padding: 10px;
+  background-color: #ffc107; /* The previous color used for Login */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left; /* Align to the left */
+  margin-top: 20px;
+  display: block;
+}
+
+.login-btn:hover {
+  background-color: #e0a800; /* Slightly darker for hover effect */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Apply styles only to the owner-login page */
+#owner-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc; /* Light background */
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 400px; /* Fixed width for the form */
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.input-icon {
+  margin-right: 8px; /* Space between icon and label */
+  color: #888;
+  font-size: 18px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* Padding to the left for the icon */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #00aaff; /* Focus border color */
+  background-color: #fff;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745; /* Green color for the submit button */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .login-form-container {
+    padding: 20px;
+  }
+}
+/*userr login */
+/* Apply styles for the user-login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc; /* Light background */
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px; /* Fixed width for the form */
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* Padding to the left for the icon */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #00aaff; /* Focus border color */
+  background-color: #fff;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745; /* Green color for the submit button */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.signup-prompt {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px;
+  }
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay to block content from screenshots */
+.block-screenshot {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Ensure it's on top of other content */
+  pointer-events: none; /* Disable any interactions with the overlay */
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.document-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.document-table th, .document-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.document-table th {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.document-preview img,
+.document-preview iframe {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.block-screenshot {
+  position: relative;
+}
+
+.block-screenshot .watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  user-select: none;
+  z-index: 9999;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+iframe {
+  pointer-events: none; /* Disable interaction with the iframe */
+}
+
+/* Disable right-click */
+body {
+  -webkit-touch-callout: none; /* Disable touch callout (iOS) */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+document-preview img,
+iframe {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+}
+
+/* Disable PrintScreen */
+@media print {
+  body {
+    visibility: hidden;
+  }
+}
+/* user dashboard.css */
+.dashboard {
+  padding: 20px;
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.suggestion-item:hover {
+  background-color: #f1f1f1;
+}
+
+.qr-scanner-section {
+  margin: 20px 0;
+}
+
+.scan-qr-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.scan-qr-button:hover {
+  background-color: #218838;
+}
+
+.qr-file-upload {
+  margin-top: 20px;
+}
+
+.qr-file-upload input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.logout-button {
+  padding: 10px 15px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/*usersignup *
+/* Apply styles for the user-signup form */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc; /* Light background */
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 400px; /* Fixed width for the form */
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* Padding to the left for the icon */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #00aaff; /* Focus border color */
+  background-color: #fff;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745; /* Green color for the submit button */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.login-prompt {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 20px;
+  }
+}
+
+/*home css */

@@ -1,0 +1,20 @@
+@aws-sdk/client-s3@^3.705.0
+aws-sdk@^2.1692.0
+bcrypt@^5.1.1
+cookie-parser@^1.4.7
+cors@^2.8.5
+crypto@^1.0.1
+dotenv@^16.4.6
+express@^4.21.1
+express-session@^1.18.1
+jsonwebtoken@^9.0.2
+mongoose@^8.8.3
+morgan@^1.10.0
+multer@^1.4.5-lts.1
+passport@^0.7.0
+passport-google-oauth20@^2.0.0
+qrcode@^1.5.4
+sanitize-filename@^1.6.3
+socket.io@^4.8.1
+uuid@^11.0.3
+npm install @aws-sdk/client-s3@^3.705.0 aws-sdk@^2.1692.0 bcrypt@^5.1.1 cookie-parser@^1.4.7 cors@^2.8.5 crypto@^1.0.1 dotenv@^16.4.6 express@^4.21.1 express-session@^1.18.1 jsonwebtoken@^9.0.2 mongoose@^8.8.3 morgan@^1.10.0 multer@^1.4.5-lts.1 passport@^0.7.0 passport-google-oauth20@^2.0.0 qrcode@^1.5.4 sanitize-filename@^1.6.3 socket.io@^4.8.1 uuid@^11.0.3

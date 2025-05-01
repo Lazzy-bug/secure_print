@@ -1,0 +1,16 @@
+.sphear {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; */
+    /* align-items: last baseline; */
+    height: 900px;
+    width: 900px;
+    background: #0c8ce9;
+    border-radius: 50%;
+    filter: blur(150px);
+    margin-right: 300px;
+
+}
+body{
+    background: #d2ebf0;
+}
