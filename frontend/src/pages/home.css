@@ -1,162 +1,124 @@
 /* General Reset */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background-color: #f4f7fa;
-  background: radial-gradient(52.73% 45.17% at 93.89% 50.04%, #0C8CE9 0%, #D0EAF0 100%);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f7fa;
   }
   
   /* Hero Section */
   .hero-section {
-    display: flex;
-    justify-content: space-evenly;
+    background: linear-gradient(135deg, #ff7f50, #ff6347);
     color: white;
-    text-align: left;
-    padding: 100px 100px;
-    animation: fadeIn 2s ease-in-out;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .hero-content {
-    flex: 1;
-    padding-right: 100px; /* Reduced padding */
-  }
-
-  .hero-logo {
-    margin: -300px;
-    flex: 1;
     text-align: center;
-    margin-right: -240px; /* Reduced margin */
+    padding: 100px 20px;
+    animation: fadeIn 2s ease-in-out;
   }
   
   .hero-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  animation: slideUp 2s ease-in-out;
-  margin: auto;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: slideUp 2s ease-in-out;
   }
   
   .hero-description {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  animation: slideUp 2s ease-in-out;
-  text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: slideUp 2s ease-in-out;
   }
   
-.hero-content .cta-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
   .cta-button {
-  display: inline-block;
-  margin: 0 auto;
-  text-align: center;
-  padding: 12px 30px;
-  font-size: 1rem;
-  background-color: #fff;
-  color: #000000;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
-  width: 161px;
-  height: 53px;
-  flex-shrink: 0;
-  margin: 12px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
   }
   
   .cta-button:hover {
-  transform: scale(1.05);
-  background-color: #0C8CE9;
-  color: white;
+    transform: scale(1.1);
+    background-color: #ff7f50;
   }
-
+  
   /* Features Section */
   .features-section {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   
   .features-section.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
   }
   
   .feature-item {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
   
   .feature-item h3 {
-  font-size: 1.25rem;
-  margin: 15px 0;
+    font-size: 1.25rem;
+    margin: 15px 0;
   }
   
   .feature-item p {
-  font-size: 1rem;
-  color: #666;
+    font-size: 1rem;
+    color: #666;
   }
   
   /* Why Secure Print Section */
   .why-secure-print {
-  padding: 50px 20px;
-  background-color: #fffefe37;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  box-shadow: #000000 ;
+    padding: 50px 20px;
+    background-color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   
   .why-secure-print.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
   }
   
   .why-item {
-  /* background-color: #f9f9f9; */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  border-radius: 12px;
-  background: #B0DEFF;
-  box-shadow: 0px 0px 30px -8px rgba(0, 0, 0, 0.25) inset;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
   }
   
   .why-item h3 {
-  font-size: 1.25rem;
-  margin: 10px 0;
+    font-size: 1.25rem;
+    margin: 10px 0;
   }
   
   .why-item p {
-  font-size: 1rem;
-  color: #666;
+    font-size: 1rem;
+    color: #666;
   }
-
-  /* Roadmap Section */
+/* Roadmap Section */
 .roadmap-section {
     padding: 50px 20px;
     background-color: #fff;
@@ -257,8 +219,6 @@ body {
     background-color: white;
     text-align: center;
     transition: box-shadow 0.3s;
-    border-radius: 25px;
-    background: rgba(252, 254, 255, 0.26);
   }
   
   .shop-container:hover,
@@ -318,22 +278,20 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-
+  
 /* Header Section */
 .main-header {
-  background-color: #ff6347;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
   padding: 20px;
-  text-align: center;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* width: 1440px; */
   height: 70px;
   flex-shrink: 0;
-  border-radius: 0px 0px 25px 25px;
-  background: linear-gradient(180deg, rgba(12, 140, 233, 0.52) 0%, rgba(7, 79, 131, 0.00) 78.46%);
+  background: #FF6A3B;
+  font-family: 'Staatliches', Arial, sans-serif;
 }
 
 .main-header h1 {
@@ -354,16 +312,25 @@ body {
   font-weight: bold;
 }
 
-.main-header {
+.main-header .logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.main-header .logo {
-  text-align: left;
+.main-header .nav-links {
+  display: flex;
+  gap: 24px;
+  font-family: 'Staatliches', Arial, sans-serif;
+  font-size: 1.3rem;
+  align-items: center;
 }
 
-.main-header .nav-links {
-  text-align: right;
+.main-header .nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 1.1rem;
+  padding: 4px 10px;
+  letter-spacing: 1px;
 }
