@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FaLock, FaClipboardList, FaCloud, FaCogs, FaShieldAlt, FaFileAlt, FaChartLine, FaExclamationTriangle } from "react-icons/fa";  // Importing necessary icons
-import "./home.css";
+import "./css/home.css";
 
 const HomePage = () => {
   useEffect(() => {

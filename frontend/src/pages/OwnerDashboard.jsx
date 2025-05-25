@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { DocumentTable } from "@/components/document/DocumentTable";
 import { FaQrcode, FaSignOutAlt } from "react-icons/fa";
-import "./owner.css";
+import "./css/OwnerDashboard.css";
+import "./Owner.css";
 
 const OwnerDashboard = () => {
   const [owner, setOwner] = useState(null);

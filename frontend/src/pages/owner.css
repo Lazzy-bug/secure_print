@@ -1,4 +1,7 @@
 /* owner.css */
+body{
+background: linear-gradient(135deg, #ff7f50, #ffffff);
+}
 
 /* General container for the dashboard */
 .logout-container {
