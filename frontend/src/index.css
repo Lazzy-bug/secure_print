@@ -853,19 +853,7 @@ iframe {
   margin: 20px 0;
 }
 
-.scan-qr-button {
-  padding: 10px 15px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
 
-.scan-qr-button:hover {
-  background-color: #218838;
-}
 
 .qr-file-upload {
   margin-top: 20px;

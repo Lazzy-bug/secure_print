@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { BrowserQRCodeReader } from "@zxing/library"; // Import the ZXing library
 import { FaCamera, FaSignOutAlt } from "react-icons/fa"; // Import camera and logout icons
+import "./css/UserDashboard.css"; // Import your CSS styles
 
 const UserDashboard = () => {
   const [user, setUser] = useState(null);
@@ -215,7 +216,7 @@ const UserDashboard = () => {
   return (
     <div className="dashboard">
       {user ? (
-        <div>
+        <div className="dashboard-container">
           <h1>Welcome, {user.email}!</h1>
           <p>User ID: {user.name}</p>
 
@@ -263,11 +264,16 @@ const UserDashboard = () => {
 
           {/* Upload QR Code from File */}
           <div className="qr-file-upload">
+            <label htmlFor="qr-file-upload" className="file-upload-label">
+              <FaCamera /> Upload QR Code
+            </label>
             <input
               type="file"
               accept="image/*"
               onChange={handleQRFileUpload}
               ref={fileInputRef}
+              id="qr-file-upload"
+              style={{ display: "none" }}
             />
           </div>
 
