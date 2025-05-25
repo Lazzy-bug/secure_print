@@ -492,7 +492,7 @@ body {
   top: 0;
   height: 70px;
   flex-shrink: 0;
-  background: #FF6A3B;
+  background: #f4f4f4;
   font-family: 'Staatliches', Arial, sans-serif;
 }
 
@@ -509,7 +509,7 @@ body {
   color: rgb(0, 0, 0);
   text-decoration: none;
   margin: 0 15px;
-  font-size: 1rem;
+  font-size: 30px;
   transition: color 0.3s;
   font-weight: bold;
 }
@@ -520,23 +520,20 @@ body {
 }
 
 .main-header .nav-links {
-  display: flex;
-  gap: 24px;
-  font-family: 'Staatliches', Arial, sans-serif;
-  font-size: 1.3rem;
-  align-items: center;
-}
-
-.main-header .nav-links a {
   color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-  font-size: 1.1rem;
-  padding: 4px 10px;
-  letter-spacing: 1px;
+  font-family: Staatliches;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
 }
 
-.logo{
-  height: fit-content;
+.main-header h3{
+  color: #000;
+  font-family: Staatliches;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
 }
